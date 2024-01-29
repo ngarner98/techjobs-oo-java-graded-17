@@ -43,4 +43,50 @@ public class JobTest {
 
         assertNotEquals(test1, test2);
     }
+
+    @Test
+    public void testToStringStartsAndEndsWithNewLine() {
+        Job test1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        String test1String = test1.toString();
+
+        assertTrue(test1String.startsWith(System.lineSeparator()));
+        assertTrue(test1String.endsWith(System.lineSeparator()));
+    }
+
+    @Test
+    public void testToStringContainsCorrectLabelsAndData() {
+        Job test1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        String test1String = test1.toString();
+        String expectedOutput = System.lineSeparator() +
+                "ID: " + test1.getId() + System.lineSeparator() +
+                "Name: " + test1.getName() + System.lineSeparator() +
+                "Employer: " + test1.getEmployer() + System.lineSeparator() +
+                "Location: " + test1.getLocation() + System.lineSeparator() +
+                "Position Type: " + test1.getPositionType() + System.lineSeparator() +
+                "Core Competency: " + test1.getCoreCompetency() + System.lineSeparator();
+
+        assertEquals(expectedOutput, test1String);
+    }
+
+    @Test
+    public void testToStringHandlesEmptyField() {
+        Job test1 = new Job("", new Employer(""), new Location("Desert"),
+                new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        String test1String = test1.toString();
+        String expectedOutput =
+                System.lineSeparator() + "ID: " + test1.getId() + System.lineSeparator() +
+                        "Name: Data not available" + System.lineSeparator() +
+                        "Employer: Data not available" + System.lineSeparator() +
+                        "Location: " + test1.getLocation() + System.lineSeparator() +
+                        "Position Type: " + test1.getPositionType() + System.lineSeparator() +
+                        "Core Competency: " + test1.getCoreCompetency() + System.lineSeparator();
+
+        assertEquals(expectedOutput, test1String);
+
+    }
 }

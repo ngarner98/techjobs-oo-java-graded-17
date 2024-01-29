@@ -2,6 +2,8 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+import static java.lang.System.lineSeparator;
+
 public class Job {
 
     private int id;
@@ -46,6 +48,15 @@ public class Job {
         return Objects.hash(id);
     }
 
+    @Override
+    public String toString() {
+        return lineSeparator() + "ID: " + getId() + lineSeparator() +
+                "Name: " + (getName().isEmpty() ? "Data not available" : getName()) + lineSeparator() +
+                "Employer: " + (getEmployer().getValue().isEmpty() ? "Data not available" : getEmployer()) + lineSeparator() +
+                "Location: " + (getLocation().getValue().isEmpty() ? "Data not available" : getLocation()) + lineSeparator() +
+                "Position Type: " + (getPositionType().getValue().isEmpty() ? "Data not available" : getPositionType()) + lineSeparator() +
+                "Core Competency: " + (getCoreCompetency().getValue().isEmpty() ? "Data not available" : getCoreCompetency()) + lineSeparator();
+    }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
