@@ -50,7 +50,7 @@ public class Job {
 
     // When running TestTaskFive, the testToStringStartsAndEndsWithNewLine() test was failing
     // regardless of the line separator placed. Tried lineSeperator(), and then \n, and then lastly
-    // hard coded \r\n because this is a Windows machine but it failed still
+    // hard coded \r\n because this is a Windows machine but it still failed
     @Override
     public String toString() {
         return lineSeparator() + "ID: " + getId() + lineSeparator() +
