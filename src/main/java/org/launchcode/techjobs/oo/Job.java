@@ -53,12 +53,12 @@ public class Job {
     // hard coded \r\n because this is a Windows machine but it failed still
     @Override
     public String toString() {
-        return "\n" + "ID: " + getId() + "\n" +
-                "Name: " + (getName().isEmpty() ? "Data not available" : getName()) + "\n" +
-                "Employer: " + (getEmployer().getValue().isEmpty() ? "Data not available" : getEmployer()) + "\n" +
-                "Location: " + (getLocation().getValue().isEmpty() ? "Data not available" : getLocation()) + "\n" +
-                "Position Type: " + (getPositionType().getValue().isEmpty() ? "Data not available" : getPositionType()) + "\n" +
-                "Core Competency: " + (getCoreCompetency().getValue().isEmpty() ? "Data not available" : getCoreCompetency()) + "\n";
+        return lineSeparator() + "ID: " + getId() + lineSeparator() +
+                "Name: " + (getName().isEmpty() ? "Data not available" : getName()) + lineSeparator() +
+                "Employer: " + (getEmployer().getValue().isEmpty() ? "Data not available" : getEmployer()) + lineSeparator() +
+                "Location: " + (getLocation().getValue().isEmpty() ? "Data not available" : getLocation()) + lineSeparator() +
+                "Position Type: " + (getPositionType().getValue().isEmpty() ? "Data not available" : getPositionType()) + lineSeparator() +
+                "Core Competency: " + (getCoreCompetency().getValue().isEmpty() ? "Data not available" : getCoreCompetency()) + lineSeparator();
     }
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
