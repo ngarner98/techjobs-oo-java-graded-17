@@ -51,8 +51,8 @@ public class JobTest {
 
         String test1String = test1.toString();
 
-        assertTrue(test1String.startsWith(System.lineSeparator()));
-        assertTrue(test1String.endsWith(System.lineSeparator()));
+        assertTrue(test1String.startsWith("\n"));
+        assertTrue(test1String.endsWith("\n"));
     }
 
     @Test
@@ -61,13 +61,13 @@ public class JobTest {
                 new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         String test1String = test1.toString();
-        String expectedOutput = System.lineSeparator() +
-                "ID: " + test1.getId() + System.lineSeparator() +
-                "Name: " + test1.getName() + System.lineSeparator() +
-                "Employer: " + test1.getEmployer() + System.lineSeparator() +
-                "Location: " + test1.getLocation() + System.lineSeparator() +
-                "Position Type: " + test1.getPositionType() + System.lineSeparator() +
-                "Core Competency: " + test1.getCoreCompetency() + System.lineSeparator();
+        String expectedOutput = "\n" +
+                "ID: " + test1.getId() + "\n" +
+                "Name: " + test1.getName() + "\n" +
+                "Employer: " + test1.getEmployer() + "\n" +
+                "Location: " + test1.getLocation() + "\n" +
+                "Position Type: " + test1.getPositionType() + "\n" +
+                "Core Competency: " + test1.getCoreCompetency() + "\n";
 
         assertEquals(expectedOutput, test1String);
     }
@@ -79,12 +79,12 @@ public class JobTest {
 
         String test1String = test1.toString();
         String expectedOutput =
-                System.lineSeparator() + "ID: " + test1.getId() + System.lineSeparator() +
-                        "Name: Data not available" + System.lineSeparator() +
-                        "Employer: Data not available" + System.lineSeparator() +
-                        "Location: " + test1.getLocation() + System.lineSeparator() +
-                        "Position Type: " + test1.getPositionType() + System.lineSeparator() +
-                        "Core Competency: " + test1.getCoreCompetency() + System.lineSeparator();
+                "\n" + "ID: " + test1.getId() + "\n" +
+                        "Name: Data not available" + "\n" +
+                        "Employer: Data not available" + "\n" +
+                        "Location: " + test1.getLocation() + "\n" +
+                        "Position Type: " + test1.getPositionType() + "\n" +
+                        "Core Competency: " + test1.getCoreCompetency() + "\n";
 
         assertEquals(expectedOutput, test1String);
 
