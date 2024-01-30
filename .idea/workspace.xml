@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Returned lineSeparator, trying to troubleshoot failing test">
+    <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="Was able to get &quot;\n&quot; to work in place of line separator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/TestTaskFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/TestTaskFive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706570952161</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Was able to get &quot;\n&quot; to work in place of line separator">
+      <option name="closed" value="true" />
+      <created>1706576381455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706576381456</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -266,6 +275,7 @@
     <MESSAGE value="Task 4 complete" />
     <MESSAGE value="Task 5 and 6 complete" />
     <MESSAGE value="Returned lineSeparator, trying to troubleshoot failing test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Returned lineSeparator, trying to troubleshoot failing test" />
+    <MESSAGE value="Was able to get &quot;\n&quot; to work in place of line separator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Was able to get &quot;\n&quot; to work in place of line separator" />
   </component>
 </project>
